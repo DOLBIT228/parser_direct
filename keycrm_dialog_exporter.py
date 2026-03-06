@@ -62,7 +62,7 @@ def extract_messages_from_current_page(debug_url: str) -> tuple[list[str], str]:
             if not page:
                 raise RuntimeError("Не знайдено відкриту вкладку KeyCRM.")
 
-            js = """
+            js = r"""
             () => {
               const container = document.querySelector('.vac-messages-container');
               if (!container) {
